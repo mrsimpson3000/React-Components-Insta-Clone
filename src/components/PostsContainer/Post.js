@@ -11,29 +11,25 @@ const Post = props => {
   // set up state for the likes
 
   return (
-    <div className="post-border">
+    <div className='post-border'>
       <PostHeader
-        username={props.post.username}
-        thumbnailUrl={
-          props.post.thumbnailUrl
-        }
+        username={props.postContent.username}
+        thumbnailUrl={props.postContent.thumbnailUrl}
       />
-      <div className="post-image-wrapper">
+      <div className='post-image-wrapper'>
         <img
-          alt="post thumbnail"
-          className="post-image"
-          src={props.post.imageUrl}
+          alt='post thumbnail'
+          className='post-image'
+          src={props.postContent.imageUrl}
         />
       </div>
       <LikeSection />
       <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
+        postId={props.postContent.imageUrl}
+        comments={props.postContent.comments}
       />
     </div>
   );
 };
 
 export default Post;
-
-
